@@ -1,6 +1,7 @@
 import ActionsPanel from "./ActionsPanel"
-import Clock from "./Clock"
 import Crystals from "./Crystals"
+import Clock from "./Clock"
+import Inventory from "./Inventory"
 
 export default function Wrap() {
 	return `
@@ -11,6 +12,9 @@ export default function Wrap() {
 			</div>
 			<div class="container">
 				${Clock()}
+			</div>
+			<div class="container">
+				${Inventory()}
 			</div>
 			<div class="container">
 				${ActionsPanel()}

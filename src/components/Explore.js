@@ -1,6 +1,7 @@
 import { game } from "../lib/game"
 import ProgressBar from "./ProgressBar"
 import { progressBarStart, progressBarReset } from "./ProgressBar"
+import { inventoryProxy } from "./Inventory"
 
 const exploreResults = [
 	{
@@ -15,21 +16,21 @@ const exploreResults = [
 	},
 	{
 		description: 'You find stone.',
-		reward: { crystals: 0.3 },
+		reward: { stone: 1 },
 		chance: 0.6
 	}
 ]
 
 export default function Explore() {
 	return `
-		<div class="explore action" data-in-progress="false" data-progress="0">
-			<button class="action-button explore-button">
-				Explore <span class="button-hotkey">(e)</span>
-			</button>
-			${ProgressBar('small')}
-			<p class="message"></p>
-		</div>
-	`
+        <div class="explore action" data-in-progress="false" data-progress="0">
+            <button class="action-button explore-button">
+                Explore <span class="button-hotkey">(e)</span>
+            </button>
+            ${ProgressBar('small')}
+            <p class="message"></p>
+        </div>
+    `
 }
 
 export function initExplore() {
@@ -54,7 +55,6 @@ function startExploring() {
 	const progressBar = action.querySelector('.progress-bar')
 	progressBarStart(progressBar, duration);
 	action.dataset.inProgress = 'true'
-	console.log('Exploring...')
 	setTimeout(() => {
 		endExploring(progressBar)
 	}, duration)
@@ -66,12 +66,14 @@ function explore() {
 	const message = document.querySelector('.explore .message')
 	message.innerText = result.description
 	message.classList.add('blink')
-	console.log('explore result', result);
+
+	for (const [key, value] of Object.entries(result.reward)) {
+		inventoryProxy[key] += value;
+	}
 }
 
 function endExploring(progressBar) {
 	document.querySelector('.explore').dataset.inProgress = 'false'
-	console.log('Done exploring!')
 	explore()
 	progressBarReset(progressBar)
 }

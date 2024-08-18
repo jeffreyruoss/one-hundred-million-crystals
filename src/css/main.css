@@ -47,6 +47,17 @@ button:hover {
 	font-weight: normal;
 }
 
+.inventory {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.inventory ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
 .action {
 	margin-top: 7px;
 	display: flex;
