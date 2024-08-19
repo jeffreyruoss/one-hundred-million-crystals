@@ -1,23 +1,12 @@
-const inventory = {
-	crystals: 0,
-	wood: 0,
-	stone: 0,
-	food: 0,
-	weapons: 0,
-	armor: 0,
-	tools: 0,
-	medicine: 0,
-	artifacts: 0,
-	coins: 0,
-};
+import { inventory } from '../lib/inventory.js'
 
 export default function Inventory() {
 	return `
-        <div class="inventory">
-            <h2>Inventory</h2>
-            <ul></ul>
-        </div>
-    `
+		<div class="inventory">
+				<h2>Inventory</h2>
+				<ul></ul>
+		</div>
+	`
 }
 
 export function initInventory() {
