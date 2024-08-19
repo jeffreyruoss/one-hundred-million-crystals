@@ -13,7 +13,7 @@ export default function Wrap() {
 			<div class="container">
 				${Clock()}
 			</div>
-			<div class="container">
+			<div class="container hide">
 				${Inventory()}
 			</div>
 			<div class="container">

@@ -11,34 +11,40 @@ const inventory = {
 	coins: 0,
 };
 
-export let inventoryProxy;
-
 export default function Inventory() {
 	return `
-        <div class="inventory">
-            <h2>Inventory</h2>
-            <ul></ul>
-        </div>
-    `
+		<div class="inventory">
+			<h2>Inventory</h2>
+			<ul></ul>
+		</div>
+	`
 }
 
 export function initInventory() {
-	inventoryProxy = new Proxy(inventory, {
-		set(target, property, value) {
-			target[property] = value;
-			updateInventory();
-			return true;
-		}
-	});
-	updateInventory();
+	updateInventoryUI();
 }
 
-function updateInventory() {
-	const ul = document.querySelector('.inventory ul');
+export function updateInventory(item, amount) {
+	if (inventory[item] !== undefined) {
+		inventory[item] += amount;
+		updateInventoryUI();
+	}
+}
+
+function updateInventoryUI() {
+	const inventoryContainer = document.querySelector('.inventory');
+	const parent = inventoryContainer.parentElement;
+	const ul = inventoryContainer.querySelector('ul');
 	ul.innerHTML = '';
-	for (const [key, value] of Object.entries(inventoryProxy)) {
+	for (const [key, value] of Object.entries(inventory)) {
+		if (value === 0) continue;
 		const li = document.createElement('li');
 		li.textContent = `${key}: ${value}`;
 		ul.appendChild(li);
+	}
+	if (ul.children.length > 0) {
+		parent.classList.remove('hide');
+	} else {
+		parent.classList.add('hide');
 	}
 }
