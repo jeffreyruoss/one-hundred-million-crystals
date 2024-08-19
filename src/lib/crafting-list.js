@@ -1,13 +1,14 @@
 export const craftingList = {
-	'plank': {
-		'wood': 2,
+	plank: {
+		requirements: { wood: 2 },
+		revealed: false
 	},
-	'pickaxe': {
-		'wood': 1,
-		'stone': 1,
+	pickaxe: {
+		requirements: { wood: 1, stone: 1 },
+		revealed: false
 	},
-	'axe': {
-		'wood': 1,
-		'stone': 1,
+	axe: {
+		requirements: { wood: 1, stone: 1 },
+		revealed: false
 	}
-};
+}

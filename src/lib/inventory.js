@@ -1,13 +1,13 @@
 export const inventory = {
-	crystals: 0,
-	wood: 0,
-	stone: 0,
-	food: 0,
-	weapons: 0,
-	armor: 0,
-	tools: 0,
-	medicine: 0,
-	artifacts: 0,
-	coins: 0,
-	planks: 0
-};
+	crystals: { quantity: 0, revealed: false },
+	wood: { quantity: 2, revealed: true },
+	stone: { quantity: 0, revealed: false },
+	food: { quantity: 0, revealed: false },
+	weapons: { quantity: 0, revealed: false },
+	armor: { quantity: 0, revealed: false },
+	tools: { quantity: 0, revealed: false },
+	medicine: { quantity: 0, revealed: false },
+	artifacts: { quantity: 0, revealed: false },
+	coins: { quantity: 0, revealed: false },
+	planks: { quantity: 0, revealed: false }
+}

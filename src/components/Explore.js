@@ -52,7 +52,7 @@ function startExploring() {
 	const button = document.querySelector('.explore-button')
 	const action = button.closest('.action')
 	const progressBar = action.querySelector('.progress-bar')
-	progressBarStart(progressBar, duration);
+	progressBarStart(progressBar, duration)
 	action.dataset.inProgress = 'true'
 	const message = document.querySelector('.explore .message')
 	message.innerText = 'Exploring...'
@@ -76,7 +76,7 @@ function explore() {
 	message.classList.add('blink')
 
 	for (const [key, value] of Object.entries(result.reward)) {
-		updateInventory(key, value);
+		updateInventory(key, value)
 	}
 }
 

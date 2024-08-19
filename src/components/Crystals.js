@@ -1,7 +1,7 @@
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "./ProgressBar"
 
 export default function Crystals() {
-	document.addEventListener('inventoryChange', updateCrystalCount);
+	document.addEventListener('inventoryChange', updateCrystalCount)
 
 	return `
 		<div class="crystals">
@@ -12,7 +12,7 @@ export default function Crystals() {
 }
 
 function updateCrystalCount(event) {
-	const crystalsCount = event.detail.crystals;
-	const crystalsCountElement = document.querySelector('.crystals-count');
-	crystalsCountElement.textContent = crystalsCount;
+	const crystalsCount = event.detail.crystals
+	const crystalsCountElement = document.querySelector('.crystals-count')
+	crystalsCountElement.textContent = crystalsCount
 }
