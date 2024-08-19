@@ -1,4 +1,4 @@
-import Wrap from './../components/Wrap'
+import Layout from '../components/Layout'
 import { initClock } from '../components/Clock'
 import { initExplore } from '../components/Explore/Explore'
 import { initInventory } from '../components/Inventory/Inventory'
@@ -7,7 +7,7 @@ import { initCrystals } from '../components/Crystals'
 
 export default function init() {
 	document.querySelector('#app').innerHTML = `
-  ${Wrap()}
+  ${Layout()}
 `
 	document.addEventListener('DOMContentLoaded', () => {
 		initClock()
