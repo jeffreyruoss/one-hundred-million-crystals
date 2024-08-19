@@ -29,8 +29,8 @@ function canCraft(item) {
 }
 
 function updateCraftUI() {
-	console.log('updateCraftUI');
 	const craftContainer = document.querySelector('.craft');
+	const parent = craftContainer.parentElement;
 	const ul = craftContainer.querySelector('ul');
 	ul.innerHTML = '';
 	const craftableItems = Object.keys(craftingList).filter(canCraft);
@@ -38,5 +38,8 @@ function updateCraftUI() {
 		const li = document.createElement('li');
 		li.textContent = item;
 		ul.appendChild(li);
+	}
+	if (ul.children.length > 0) {
+		parent.classList.remove('hide');
 	}
 }

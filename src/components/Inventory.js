@@ -34,8 +34,6 @@ function updateInventoryUI() {
 	}
 	if (ul.children.length > 0) {
 		parent.classList.remove('hide');
-	} else {
-		parent.classList.add('hide');
 	}
 }
 

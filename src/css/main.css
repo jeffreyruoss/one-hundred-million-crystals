@@ -60,15 +60,22 @@ button:hover {
 	font-weight: normal;
 }
 
-.inventory {
-	display: flex;
-	flex-wrap: wrap;
-}
-
 .inventory ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
+}
+
+.inventory ul {
+	margin-top: 5px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.inventory li {
+	padding-top: 5px;
+	margin-right: 20px;
+	text-transform: capitalize;
 }
 
 .action {
@@ -119,14 +126,4 @@ button:hover {
 	animation: blink 0.2s linear 3;
 }
 
-.inventory ul {
-	margin-left: 20px;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.inventory li {
-	padding-top: 5px;
-	margin-right: 20px;
-	text-transform: capitalize;
-}
+.craft {}

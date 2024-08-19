@@ -1,4 +1,3 @@
-import { game } from "../lib/game"
 import ProgressBar from "./ProgressBar"
 import { progressBarStart, progressBarReset } from "./ProgressBar"
 import { updateInventory } from "./Inventory"
@@ -49,7 +48,7 @@ export function initExplore() {
 
 function startExploring() {
 	if (document.querySelector('.explore').dataset.inProgress === 'true') return
-	const duration = 30
+	const duration = 300
 	const button = document.querySelector('.explore-button')
 	const action = button.closest('.action')
 	const progressBar = action.querySelector('.progress-bar')
