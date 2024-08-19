@@ -1,6 +1,6 @@
-import ProgressBar from "./ProgressBar"
-import { progressBarStart, progressBarReset } from "./ProgressBar"
-import { updateInventory } from "./Inventory"
+import ProgressBar from "../ProgressBar"
+import { progressBarStart, progressBarReset } from "../ProgressBar"
+import { updateInventory } from "../Inventory/Inventory"
 
 const exploreResults = [
 	{
@@ -64,7 +64,6 @@ function startExploring() {
 
 function explore() {
 	const result = exploreResults.find(result => Math.random() < result.chance)
-	console.log('result', result)
 	if (!result) {
 		const message = document.querySelector('.explore .message')
 		message.innerText = 'You found nothing.'

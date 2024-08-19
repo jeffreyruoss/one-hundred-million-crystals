@@ -1,4 +1,4 @@
-import Explore from './Explore.js'
+import Explore from './Explore/Explore.js'
 
 export default function ActionsPanel() {
 	return `

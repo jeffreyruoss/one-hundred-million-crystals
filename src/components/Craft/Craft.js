@@ -1,6 +1,6 @@
-import { inventory } from '../lib/inventory'
-import { craftingList } from '../lib/crafting-list'
-import ProgressBar from './ProgressBar'
+import { inventory } from '../Inventory/inventory-data'
+import { craftingList } from './crafting-data'
+import ProgressBar from '../ProgressBar'
 
 export default function Craft() {
 	const craftableItems = Object.keys(craftingList).filter(canCraft)

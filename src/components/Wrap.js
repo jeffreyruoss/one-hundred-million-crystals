@@ -1,8 +1,8 @@
 import Crystals from "./Crystals"
 import Clock from "./Clock"
-import Inventory from "./Inventory"
+import Inventory from "./Inventory/Inventory"
 import ActionsPanel from "./ActionsPanel"
-import Craft from "./Craft"
+import Craft from "./Craft/Craft"
 
 export default function Wrap() {
 	return `
