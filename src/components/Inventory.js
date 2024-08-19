@@ -13,11 +13,11 @@ const inventory = {
 
 export default function Inventory() {
 	return `
-		<div class="inventory">
-			<h2>Inventory</h2>
-			<ul></ul>
-		</div>
-	`
+        <div class="inventory">
+            <h2>Inventory</h2>
+            <ul></ul>
+        </div>
+    `
 }
 
 export function initInventory() {
@@ -28,6 +28,7 @@ export function updateInventory(item, amount) {
 	if (inventory[item] !== undefined) {
 		inventory[item] += amount;
 		updateInventoryUI();
+		dispatchInventoryChangeEvent();
 	}
 }
 
@@ -47,4 +48,9 @@ function updateInventoryUI() {
 	} else {
 		parent.classList.add('hide');
 	}
+}
+
+function dispatchInventoryChangeEvent() {
+	const event = new CustomEvent('inventoryChange', { detail: inventory });
+	document.dispatchEvent(event);
 }
