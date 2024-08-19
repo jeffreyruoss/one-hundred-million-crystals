@@ -20,7 +20,7 @@ export default function Wrap() {
 			<div class="container">
 				${ActionsPanel()}
 			</div>
-			<div class="container">
+			<div class="container hide">
 				${Craft()}
 			</div>
 		</div>

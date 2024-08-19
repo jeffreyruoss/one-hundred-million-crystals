@@ -24,6 +24,18 @@ export default function Craft() {
 
 export function initCraft() {
 	document.addEventListener('inventoryChange', updateCraftUI)
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'c') {
+			startCrafting()
+		}
+	})
+
+	const exploreButton = document.querySelector('.craft-button')
+
+	exploreButton.addEventListener('click', (event) => {
+		startCrafting()
+	})
 }
 
 function canCraft(item) {
@@ -38,9 +50,10 @@ function canCraft(item) {
 }
 
 function updateCraftUI() {
-	const craftContainer = document.querySelector('.craft')
-	const parent = craftContainer.parentElement
-	const ul = craftContainer.querySelector('ul')
+	const craft = document.querySelector('.craft')
+	const craftPanel = craft.parentElement
+	const parent = craftPanel.parentElement
+	const ul = craftPanel.querySelector('ul')
 	ul.innerHTML = ''
 	const craftableItems = Object.keys(craftingList).filter(item => craftingList[item].revealed || canCraft(item))
 	for (const item of craftableItems) {
@@ -51,4 +64,8 @@ function updateCraftUI() {
 	if (ul.children.length > 0) {
 		parent.classList.remove('hide')
 	}
+}
+
+function startCrafting() {
+	console.log('startCrafting');
 }
