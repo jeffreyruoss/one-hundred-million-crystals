@@ -1,7 +1,7 @@
 import Crystals from "./Crystals"
 import Clock from "./Clock"
 import Inventory from "./Inventory/Inventory"
-import ActionsPanel from "./ActionsPanel"
+import Explore from "./Explore/Explore"
 import Craft from "./Craft/Craft"
 
 export default function Wrap() {
@@ -18,9 +18,9 @@ export default function Wrap() {
 				${Inventory()}
 			</div>
 			<div class="container">
-				${ActionsPanel()}
+				${Explore()}
 			</div>
-			<div class="container hide">
+			<div class="container">
 				${Craft()}
 			</div>
 		</div>

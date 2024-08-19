@@ -23,6 +23,7 @@ const exploreResults = [
 export default function Explore() {
 	return `
 		<div class="explore action" data-in-progress="false" data-progress="0">
+			<h2>Explore</h2>
 			<button class="action-button explore-button">
 				Explore <span class="button-hotkey">(e)</span>
 			</button>

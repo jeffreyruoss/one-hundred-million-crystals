@@ -6,15 +6,13 @@ export default function Craft() {
 	const craftableItems = Object.keys(craftingList).filter(canCraft)
 
 	return `
-		<div class="craftPanel">
+		<div class="craft action" data-in-progress="false" data-progress="0">
 			<h2>Craft</h2>
-			<div class="craft action" data-in-progress="false" data-progress="0">
-				<button class="action-button craft-button">
-					Craft <span class="button-hotkey">(c)</span>
-				</button>
-				${ProgressBar('small')}
-				<p class="message"></p>
-			</div>
+			<button class="action-button craft-button">
+				Craft <span class="button-hotkey">(c)</span>
+			</button>
+			${ProgressBar('small')}
+			<p class="message"></p>
 			<ul>
 					${craftableItems.map(item => `<li>${item}</li>`).join('')}
 			</ul>

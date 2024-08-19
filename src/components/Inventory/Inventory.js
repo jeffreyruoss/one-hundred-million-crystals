@@ -2,11 +2,11 @@ import { inventory } from './inventory-data'
 
 export default function Inventory() {
 	return `
-        <div class="inventory">
-                <h2>Inventory</h2>
-                <ul></ul>
-        </div>
-    `
+		<div class="inventory">
+			<h2>Inventory</h2>
+			<ul></ul>
+		</div>
+	`
 }
 
 export function initInventory() {
