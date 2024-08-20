@@ -11,13 +11,15 @@ export default function Craft() {
 			<button class="action-button craft-button">
 				Craft <span class="button-hotkey">(c)</span>
 			</button>
-			${ProgressBar('small')}
-			<p class="message"></p>
+			<div class="progress-bar-container">
+				${ProgressBar('small')}
+				<p class="message"></p>
+			</div>
 			<ul>
-					${craftableItems.map(item => `<li>${item}</li>`).join('')}
+				${craftableItems.map(item => `<li>${item}</li>`).join('')}
 			</ul>
 		</div>
-    `
+	`
 }
 
 export function initCraft() {

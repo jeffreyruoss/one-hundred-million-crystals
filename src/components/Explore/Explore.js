@@ -27,8 +27,10 @@ export default function Explore() {
 			<button class="action-button explore-button">
 				Explore <span class="button-hotkey">(e)</span>
 			</button>
-			${ProgressBar('small')}
-			<p class="message"></p>
+			<div class="progress-bar-container">
+				${ProgressBar('small')}
+				<p class="message"></p>
+			</div>
 		</div>
 	`
 }
