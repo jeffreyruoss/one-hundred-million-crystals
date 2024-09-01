@@ -39,8 +39,8 @@ export function initCraft() {
 }
 
 function canCraft(item) {
-	const requirements = craftingList[item].requirements
-	for (const [resource, amount] of Object.entries(requirements)) {
+	const materials = craftingList[item].materials
+	for (const [resource, amount] of Object.entries(materials)) {
 		if (inventory[resource].quantity < amount) {
 			return false
 		}
