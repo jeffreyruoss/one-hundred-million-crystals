@@ -14,6 +14,12 @@ export const craftingList = {
 		hotkey: 'h',
 		revealed: false
 	},
+	lumbermill: {
+		requirements: { workshop: 1, hammer: 1 },
+		materials: { wood: 5, stone: 3 },
+		hotkey: 'l',
+		revealed: false
+	},
 	workshop: {
 		requirements: { hammer: 1 },
 		materials: { wood: 5, stone: 3 },
@@ -21,13 +27,13 @@ export const craftingList = {
 		revealed: false
 	},
 	quarry: {
-		requirements: { hammer: 1 },
+		requirements: { workshop: 1, hammer: 1 },
 		materials: { wood: 5, stone: 3 },
 		hotkey: 'q',
 		revealed: false
 	},
 	mine: {
-		requirements: { pickaxe: 1 },
+		requirements: { workshop: 1, pickaxe: 1 },
 		materials: { wood: 5, stone: 3 },
 		hotkey: 'm',
 		revealed: false

@@ -36,11 +36,11 @@ export default function Explore() {
 }
 
 export function initExplore() {
-	document.addEventListener('keydown', (event) => {
-		if (event.key === 'e') {
-			startExploring()
-		}
-	})
+	// document.addEventListener('keydown', (event) => {
+	// 	if (event.key === 'e') {
+	// 		startExploring()
+	// 	}
+	// })
 
 	const exploreButton = document.querySelector('.explore-button')
 

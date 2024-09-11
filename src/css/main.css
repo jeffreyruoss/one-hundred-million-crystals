@@ -78,9 +78,9 @@ button:hover {
 	text-transform: capitalize;
 }
 
-.action {
-	display: flex;
-	flex-wrap: wrap;
+.actions ul {
+	list-style-type: none;
+	padding: 0;
 }
 
 .action h2 {

@@ -1,0 +1,12 @@
+#modal {
+	background-color: #1F1F1F;
+	color: #C4C4C4;
+	outline: none;
+	background-color: #333;
+	border-radius: 15px;
+	border: 1px solid #505050;
+}
+
+#modal::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+}

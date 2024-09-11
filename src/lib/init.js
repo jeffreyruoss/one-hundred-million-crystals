@@ -1,3 +1,4 @@
+import { mainKeyEvents } from './main-key-events'
 import Layout from '../components/Layout'
 import { initClock } from '../components/Clock'
 import { initExplore } from '../components/Explore/Explore'
@@ -13,7 +14,8 @@ export default function init() {
 		initClock()
 		initCrystals()
 		initInventory()
-		initExplore()
-		initCraft()
+		// initExplore()
+		// initCraft()
+		mainKeyEvents()
 	})
 }

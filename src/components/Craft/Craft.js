@@ -2,6 +2,8 @@ import { inventory } from '../Inventory/inventory-data'
 import { craftingList } from './crafting-data'
 import ProgressBar from '../ProgressBar'
 
+let craftMode = false
+
 export default function Craft() {
 	const craftableItems = Object.keys(craftingList).filter(canCraft)
 
@@ -68,4 +70,5 @@ function updateCraftUI() {
 
 function startCrafting() {
 	console.log('startCrafting');
+	craftMode = true
 }
