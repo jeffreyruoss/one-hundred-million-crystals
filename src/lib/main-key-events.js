@@ -12,7 +12,7 @@ export function mainKeyEvents() {
 
 		console.log(e.key);
 
-		if (e.key === 'Escape' && game.keyMode !== 'main') {
+		if (e.key === 'm' && game.keyMode !== 'main' || e.key === 'Escape' && game.keyMode !== 'main') {
 			game.keyMode = 'main';
 
 			destroyModal();

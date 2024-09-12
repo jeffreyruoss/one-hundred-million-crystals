@@ -60,6 +60,18 @@ button:hover {
 	font-weight: normal;
 }
 
+.subtle {
+	color: #999;
+}
+
+.key {
+	border: 1px solid #505050;
+	border-radius: 5px;
+	padding: 3px 5px;
+	background-color: #2c2c2c;
+	color: #fff;
+}
+
 .inventory ul {
 	list-style-type: none;
 	padding: 0;

@@ -1,6 +1,7 @@
 import { craftItems } from './sub-actions-data/craft-items.js'
 import { explorationZones } from './sub-actions-data/exploration-zones.js'
 import { quests } from './sub-actions-data/quests.js'
+import { actionsData } from './actions-data.js'
 import SubAction from './SubAction.js'
 
 const subActionsData = {
@@ -10,12 +11,10 @@ const subActionsData = {
 }
 
 export default function SubActions(action) {
-	console.log('action:', action);
-	console.log(subActionsData[action]);
-
-
 	return `
 		<div class="sub-actions">
+			<p class="subtle">Press <span class="key">m</span> to return to the main dashboard</p>
+			<h3>${actionsData.find(a => a.key === action).subActionsTitle}</h3>
 			<ul>
 				${subActionsData[action].map(SubAction).join('')}
 			</ul>
