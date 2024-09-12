@@ -1,7 +1,11 @@
 export default function SubAction(subAction) {
+	console.log(subAction);
 	return `
 		<li class="sub-action	sub-action-${subAction.key}">
-			<h3>${subAction.title}</h3>
+			<div class="sub-action-title-row">
+				<span class="hotkey">${subAction.hotkey}</span>
+				<h4>${subAction.title}</h4>
+			</div>
 			<p>${subAction.description}</p>
 		</li>
 	`

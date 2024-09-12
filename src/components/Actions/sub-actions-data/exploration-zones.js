@@ -1,78 +1,26 @@
 export const explorationZones = [
 	{
-		title: 'Zone 1',
-		description: 'Zone 1 description',
-		levels: [
-			{
-				title: 'Level 1',
-				description: 'Level 1 description',
-				rewards: [
-					{
-						title: 'Reward 1',
-						description: 'Reward 1 description',
-						quantity: 1
-					},
-					{
-						title: 'Reward 2',
-						description: 'Reward 2 description',
-						quantity: 1
-					}
-				]
-			},
-			{
-				title: 'Level 2',
-				description: 'Level 2 description',
-				rewards: [
-					{
-						title: 'Reward 1',
-						description: 'Reward 1 description',
-						quantity: 1
-					},
-					{
-						title: 'Reward 2',
-						description: 'Reward 2 description',
-						quantity: 1
-					}
-				]
-			}
-		]
+		hotkey: 'a',
+		title: 'Arctic',
+		key: 'arctic',
+		description: 'A frozen wasteland with snow-covered mountains and icy lakes.'
 	},
 	{
-		title: 'Zone 2',
-		description: 'Zone 2 description',
-		levels: [
-			{
-				title: 'Level 1',
-				description: 'Level 1 description',
-				rewards: [
-					{
-						title: 'Reward 1',
-						description: 'Reward 1 description',
-						quantity: 1
-					},
-					{
-						title: 'Reward 2',
-						description: 'Reward 2 description',
-						quantity: 1
-					}
-				]
-			},
-			{
-				title: 'Level 2',
-				description: 'Level 2 description',
-				rewards: [
-					{
-						title: 'Reward 1',
-						description: 'Reward 1 description',
-						quantity: 1
-					},
-					{
-						title: 'Reward 2',
-						description: 'Reward 2 description',
-						quantity: 1
-					}
-				]
-			}
-		]
-	}
+		hotkey: 'b',
+		title: 'Beach',
+		key: 'beach',
+		description: 'A sandy beach with crashing waves and rocky cliffs.'
+	},
+	{
+		hotkey: 'c',
+		title: 'Cave',
+		key: 'cave',
+		description: 'A dark, damp cave with stalactites and stalagmites.'
+	},
+	{
+		hotkey: 'd',
+		title: 'Desert',
+		key: 'desert',
+		description: 'A scorching desert with sand dunes and cacti.'
+	},
 ]

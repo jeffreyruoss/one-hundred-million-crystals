@@ -1,7 +1,9 @@
 function Modal(content) {
 	return `
 		<dialog id="modal">
-			${content}
+			<div class="container">
+				${content}
+			</div>
 		</dialog>
 	`
 }
