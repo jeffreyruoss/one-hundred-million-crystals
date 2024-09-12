@@ -13,7 +13,7 @@ const subActionsData = {
 export default function SubActions(action) {
 	return `
 		<div class="sub-actions">
-			<p class="subtle">Press <span class="key">m</span> to return to the main dashboard</p>
+			<p class="subtle">Press <span class="hotkey">m</span> to return to the main dashboard</p>
 			<h3>${actionsData.find(a => a.key === action).subActionsTitle}</h3>
 			<ul>
 				${subActionsData[action].map(SubAction).join('')}
