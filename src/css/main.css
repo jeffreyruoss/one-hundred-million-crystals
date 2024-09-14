@@ -101,17 +101,6 @@ button:hover {
 	text-transform: capitalize;
 }
 
-.actions ul {
-	list-style-type: none;
-	padding: 0;
-}
-
-.action h2 {
-	margin-top: 0;
-	margin-bottom: 7px;
-	width: 100%;
-}
-
 .progress-bar-container {
 	position: relative;
 	flex-grow: 1;
@@ -138,14 +127,6 @@ button:hover {
 	background-color: #000;
 	width: 0%;
 	height: 100%;
-}
-
-.action .message {
-	margin: 7px 0 0 12px;
-	width: 100%;
-	position: absolute;
-	top: 4px;
-	left: 7px;
 }
 
 @keyframes blink {

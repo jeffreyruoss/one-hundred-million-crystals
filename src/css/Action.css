@@ -1,0 +1,9 @@
+.actions ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.action-title-row {
+	display: flex;
+	gap: 5px;
+}
