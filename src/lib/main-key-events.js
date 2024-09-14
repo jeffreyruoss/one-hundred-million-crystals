@@ -22,14 +22,14 @@ function switchToSubMode(key) {
 
 function handleSubModeKey(key) {
 	const subActionData = subActionsData[game.hotKeyMode];
-	if (subActionData) {
-		const subAction = subActionData.find(a => a.hotkey === key);
-		if (subAction) {
-			const destination = document.querySelector(`.${game.hotKeyMode}-tasks-queue`);
-			createTask(subAction, destination);
-			returnToMainDashboard();
-		}
-	}
+	if (!subActionData) return;
+
+	const subAction = subActionData.find(a => a.hotkey === key);
+	if (!subAction) return;
+
+	const destination = document.querySelector(`.${game.hotKeyMode}-tasks-queue`);
+	createTask(subAction, destination);
+	returnToMainDashboard();
 }
 
 export function mainKeyEvents() {
