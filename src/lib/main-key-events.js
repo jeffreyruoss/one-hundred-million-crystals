@@ -5,35 +5,44 @@ import { mainKeyEventsData } from './main-key-events-data.js';
 import { subActionsData } from '../components/Actions/SubActions.js';
 import { createTask } from '../components/Actions/Task.js';
 
+const MAIN_MODE = 'main';
+const ESC_KEY = 'Escape';
+const M_KEY = 'm';
+
+function returnToMainDashboard() {
+	game.hotKeyMode = MAIN_MODE;
+	destroyModal();
+}
+
+function switchToSubMode(key) {
+	const action = mainKeyEventsData[MAIN_MODE][key];
+	game.hotKeyMode = action;
+	createModal(SubActions(action));
+}
+
+function handleSubModeKey(key) {
+	const subActionData = subActionsData[game.hotKeyMode];
+	if (subActionData) {
+		const subAction = subActionData.find(a => a.hotkey === key);
+		if (subAction) {
+			const destination = document.querySelector(`.${game.hotKeyMode}-tasks-queue`);
+			createTask(subAction, destination);
+			returnToMainDashboard();
+		}
+	}
+}
 
 export function mainKeyEvents() {
 	document.addEventListener('keydown', (e) => {
 		const currentMode = game.hotKeyMode;
 		const mainKeyMap = mainKeyEventsData[currentMode];
 
-		// if not in main mode and 'm' or 'esc' return to main dashboard
-		if (e.key === 'm' && game.hotKeyMode !== 'main' || e.key === 'Escape' && game.hotKeyMode !== 'main') {
-			game.hotKeyMode = 'main';
-			destroyModal();
-		}
-
-		// if in main mode and key is in mainKeyMap, change to sub mode and create modal
-		else if (game.hotKeyMode === 'main' && mainKeyMap[e.key]) {
-			const action = mainKeyMap[e.key];
-			game.hotKeyMode = action;
-			createModal(SubActions(action));
-		}
-
-		// if in sub mode and key is in subActionsData, do something
-		else {
-			const subActionData = subActionsData[game.hotKeyMode];
-			if (subActionData) {
-				const subAction = subActionsData[game.hotKeyMode].find(a => a.hotkey === e.key);
-				if (subAction) {
-					const destination = document.querySelector(`.${game.hotKeyMode}-tasks-queue`);
-					createTask(subAction, destination);
-				}
-			}
+		if ((e.key === M_KEY || e.key === ESC_KEY) && currentMode !== MAIN_MODE) {
+			returnToMainDashboard();
+		} else if (currentMode === MAIN_MODE && mainKeyMap[e.key]) {
+			switchToSubMode(e.key);
+		} else {
+			handleSubModeKey(e.key);
 		}
 	});
 }
