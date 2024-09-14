@@ -4,7 +4,7 @@ import { quests } from './sub-actions-data/quests.js'
 import { actionsData } from './actions-data.js'
 import SubAction from './SubAction.js'
 
-const subActionsData = {
+export const subActionsData = {
 	'craft': craftItems,
 	'explore': explorationZones,
 	'quests': quests

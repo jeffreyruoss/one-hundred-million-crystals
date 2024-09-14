@@ -9,6 +9,7 @@ export default function Action(action) {
 					<h2>${action.title}</h2>
 				</div>
 				<p>${action.description}</p>
+				<ul class="${action.key}-tasks-queue"></ul>
 			</div>
 		</li>
 	`
