@@ -1,4 +1,4 @@
-export default function ProgressBar(size) {
+export default function ProgressBar(size, content) {
 	let sizeClass = ''
 	if (size === 'large') {
 		sizeClass = 'progress-bar-large'
@@ -9,18 +9,27 @@ export default function ProgressBar(size) {
 	return `
 		<div class="progress-bar ${sizeClass}" data-progress="0">
 			<div class="progress-bar-fill"></div>
+			<span class="progress-bar-content">${content}</span>
 		</div>
 	`
 }
 
-export function progressBarStart(element, duration) {
-	const progressBarFill = element.querySelector('.progress-bar-fill')
-	progressBarFill.style.transition = `width ${duration}ms linear`
-	progressBarFill.style.width = '100%'
+export function progressBarStart(progressBar, duration) {
+	const progressBarFill = progressBar.querySelector('.progress-bar-fill');
+	progressBarFill.style.transition = 'none';
+	progressBarFill.style.width = '0%';
+	progressBarFill.offsetWidth;
+	progressBarFill.style.transition = `width ${duration}ms linear`;
+	progressBarFill.style.width = '100%';
+	setTimeout(() => {
+		progressBarComplete(progressBar);
+	}, duration);
 }
 
-export function progressBarReset(element) {
-	const progressBarFill = element.querySelector('.progress-bar-fill')
-	progressBarFill.style.transition = 'none'
-	progressBarFill.style.width = '0%'
+export function progressBarComplete(progressBar) {
+	const progressBarFill = progressBar.querySelector('.progress-bar-fill');
+	const progressBarContent = progressBar.querySelector('.progress-bar-content');
+	progressBarFill.classList.remove('blink');
+	progressBarFill.classList.add('blink', 'progress-bar-fill-complete');
+	progressBarContent.textContent += ' (Complete)';
 }

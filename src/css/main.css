@@ -79,7 +79,7 @@ button:hover {
 	width: 20px;
 	text-align: center;
 	background-color: rgb(27, 36, 49);
-	color: #1F64F2;
+	color: #5087F7;
 	display: inline-block;
 }
 
@@ -101,34 +101,6 @@ button:hover {
 	text-transform: capitalize;
 }
 
-.progress-bar-container {
-	position: relative;
-	flex-grow: 1;
-}
-
-.progress-bar {
-	height: 40px;
-	background-color: #374150;
-	border-radius: 2px;
-	overflow: hidden;
-}
-
-.progress-bar-small {
-	margin-left: 7px;
-	flex-grow: 1;
-}
-
-.progress-bar-large {
-	margin-top: 15px;
-	height: 38px;
-}
-
-.progress-bar-fill {
-	background-color: #000;
-	width: 0%;
-	height: 100%;
-}
-
 @keyframes blink {
 
 	0%,
@@ -142,7 +114,7 @@ button:hover {
 }
 
 .blink {
-	animation: blink 0.2s linear 3;
+	animation: blink 0.2s linear 2;
 }
 
 .craft ul {

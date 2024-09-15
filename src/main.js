@@ -4,6 +4,7 @@ import './css/Modal.css'
 import './css/Action.css'
 import './css/SubActions.css'
 import './css/SubAction.css'
+import './css/ProgressBar.css'
 import init from './lib/init'
 
 init()

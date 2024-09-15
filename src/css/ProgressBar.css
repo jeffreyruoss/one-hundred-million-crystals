@@ -1,0 +1,33 @@
+.progress-bar-container {
+	position: relative;
+	flex-grow: 1;
+}
+
+.progress-bar {
+	margin-top: 5px;
+	padding: 7px;
+	background-color: #374150;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+}
+
+.progress-bar-fill {
+	background-color: #074FCA;
+	width: 0%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.progress-bar-fill-complete {
+	background-color: #076445;
+}
+
+.progress-bar-content {
+	color: #fff;
+	position: relative;
+	z-index: 1;
+}
