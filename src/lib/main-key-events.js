@@ -1,5 +1,5 @@
 import SubActions from '../components/Actions/SubActions.js';
-import { createModal, destroyModal } from '../components/Modal.js';
+import { openModal, closeModal } from '../components/Modal.js';
 import { game } from './game.js';
 import { mainKeyEventsData } from './main-key-events-data.js';
 import { subActionsData } from '../components/Actions/SubActions.js';
@@ -11,13 +11,13 @@ const M_KEY = 'm';
 
 function returnToMainDashboard() {
 	game.hotKeyMode = MAIN_MODE;
-	destroyModal();
+	closeModal();
 }
 
 function switchToSubMode(key) {
 	const action = mainKeyEventsData[MAIN_MODE][key];
 	game.hotKeyMode = action;
-	createModal(SubActions(action));
+	openModal(SubActions(action));
 }
 
 function handleSubModeKey(key) {

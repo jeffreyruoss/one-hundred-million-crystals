@@ -1,19 +1,21 @@
-function Modal(content) {
+export default function Modal() {
 	return `
 		<dialog id="modal">
 			<div class="container">
-				${content}
 			</div>
 		</dialog>
 	`
 }
 
-export function createModal(content) {
-	document.body.innerHTML += Modal(content);
+export function openModal(content) {
+	const modal = document.getElementById('modal');
+	const container = modal.querySelector('.container');
+	container.innerHTML = content;
 	document.getElementById('modal').showModal();
 }
 
-export function destroyModal() {
-	const modal = document.getElementById('modal');
-	modal.remove();
+export function closeModal() {
+	document.getElementById('modal').close();
+	document.getElementById('modal').querySelector('.container').innerHTML = '';
+
 }

@@ -9,7 +9,6 @@ export default function Task(subAction) {
 }
 
 export function createTask(subAction, destination) {
-	console.log('create task');
 	const taskHTML = Task(subAction);
 	const tempContainer = document.createElement('div');
 	tempContainer.innerHTML = taskHTML;

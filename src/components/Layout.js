@@ -2,6 +2,7 @@ import Crystals from "./Crystals"
 import Clock from "./Clock"
 import Inventory from "./Inventory/Inventory"
 import Actions from "./Actions/Actions"
+import Modal from "./Modal"
 
 export default function Wrap() {
 	return `
@@ -18,5 +19,6 @@ export default function Wrap() {
 			</div>
 			${Actions()}
 		</div>
+		${Modal()}
 	`
 }
