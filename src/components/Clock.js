@@ -1,4 +1,4 @@
-import { game } from './../lib/game'
+import { game } from '../state/game'
 
 export default function Clock() {
 	return `

@@ -1,7 +1,7 @@
 import SubActions from '../components/Actions/SubActions.js';
 import { openModal, closeModal } from '../components/Modal.js';
-import { game } from './game.js';
-import { mainKeyEventsData } from './main-key-events-data.js';
+import { game } from '../state/game.js';
+import { mainKeyEventsData } from '../data/main-key-events-data.js';
 import { subActionsData } from '../components/Actions/SubActions.js';
 import { createTask } from '../components/Actions/Task.js';
 

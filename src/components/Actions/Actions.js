@@ -1,5 +1,5 @@
 import Action from "./Action"
-import { actionsData } from "./actions-data"
+import { actionsData } from "../../data/actions-data"
 
 export default function Actions() {
 	return `
