@@ -1,4 +1,4 @@
-import { inventory } from './inventory-data'
+import { inventory } from '../../data/inventory'
 
 export default function Inventory() {
 	return `

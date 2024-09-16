@@ -1,7 +1,7 @@
 import { craftItems } from '../../data/sub-actions-data/craft-items.js'
 import { explorationZones } from '../../data/sub-actions-data/exploration-zones.js'
 import { quests } from '../../data/sub-actions-data/quests.js'
-import { actionsData } from '../../data/actions-data.js'
+import { actionsData } from '../../data/actions.js'
 import SubAction from './SubAction.js'
 
 export const subActionsData = {

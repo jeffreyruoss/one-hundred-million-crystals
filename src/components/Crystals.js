@@ -1,5 +1,5 @@
 import ProgressBar from "./ProgressBar"
-import { inventory } from './Inventory/inventory-data'
+import { inventory } from '../data/inventory'
 
 export default function Crystals() {
 	return `
