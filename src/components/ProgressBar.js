@@ -1,29 +1,29 @@
-export default function ProgressBar(size, content) {
-	let sizeClass = ''
-	if (size === 'large') {
-		sizeClass = 'progress-bar-large'
-	} else if (size === 'small') {
-		sizeClass = 'progress-bar-small'
-	}
+export default function ProgressBar(content) {
+	content = content || ''
 
 	return `
-		<div class="progress-bar ${sizeClass}" data-progress="0">
+		<div class="progress-bar" data-progress="0">
 			<div class="progress-bar-fill"></div>
 			<span class="progress-bar-content">${content}</span>
 		</div>
 	`
 }
 
-export function progressBarStart(progressBar, duration) {
+export function progressBarStart(progressBar, duration, startingProgress) {
 	const progressBarFill = progressBar.querySelector('.progress-bar-fill');
 	progressBarFill.style.transition = 'none';
-	progressBarFill.style.width = '0%';
+	progressBarFill.style.width = startingProgress || 0;
 	progressBarFill.offsetWidth;
 	progressBarFill.style.transition = `width ${duration}ms linear`;
 	progressBarFill.style.width = '100%';
-	setTimeout(() => {
-		progressBarComplete(progressBar);
-	}, duration);
+	// setTimeout(() => {
+	// 	progressBarComplete(progressBar);
+	// }, duration);
+}
+
+export function progressBarUpdate(progressBar, progress) {
+	const progressBarFill = progressBar.querySelector('.progress-bar-fill');
+	progressBarFill.style.width = `${progress}%`;
 }
 
 export function progressBarComplete(progressBar) {

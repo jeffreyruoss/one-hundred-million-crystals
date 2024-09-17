@@ -6,6 +6,7 @@
 .progress-bar {
 	margin-top: 5px;
 	padding: 7px;
+	min-height: 18px;
 	background-color: #374150;
 	border-radius: 5px;
 	overflow: hidden;

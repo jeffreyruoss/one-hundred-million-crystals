@@ -1,5 +1,5 @@
 export const inventory = {
-	crystals: { quantity: 1, revealed: true },
+	crystals: { quantity: 500000, revealed: true },
 	wood: { quantity: 2, revealed: true },
 	stone: { quantity: 0, revealed: false },
 	food: { quantity: 0, revealed: false },
