@@ -16,7 +16,7 @@ export function initCrystals() {
 }
 
 function updateCrystalCount() {
-	console.log('updateCrystalCount');
+	console.log('updateCrystalCount')
 	const crystalsCountElement = document.querySelector('.crystals-count')
 	crystalsCountElement.textContent = inventory.crystals.quantity
 }

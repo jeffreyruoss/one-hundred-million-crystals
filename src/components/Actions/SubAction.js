@@ -1,5 +1,4 @@
 export default function SubAction(subAction) {
-	console.log(subAction);
 	return `
 		<li class="sub-action	sub-action-${subAction.key}">
 			<div class="sub-action-title-row">

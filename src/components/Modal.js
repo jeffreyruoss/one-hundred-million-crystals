@@ -8,14 +8,13 @@ export default function Modal() {
 }
 
 export function openModal(content) {
-	const modal = document.getElementById('modal');
-	const container = modal.querySelector('.container');
-	container.innerHTML = content;
-	document.getElementById('modal').showModal();
+	const modal = document.getElementById('modal')
+	const container = modal.querySelector('.container')
+	container.innerHTML = content
+	document.getElementById('modal').showModal()
 }
 
 export function closeModal() {
-	document.getElementById('modal').close();
-	document.getElementById('modal').querySelector('.container').innerHTML = '';
-
+	document.getElementById('modal').close()
+	document.getElementById('modal').querySelector('.container').innerHTML = ''
 }

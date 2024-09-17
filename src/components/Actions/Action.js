@@ -1,4 +1,4 @@
-import SubActions from "./SubActions";
+import SubActions from "./SubActions"
 
 export default function Action(action) {
 	return `
